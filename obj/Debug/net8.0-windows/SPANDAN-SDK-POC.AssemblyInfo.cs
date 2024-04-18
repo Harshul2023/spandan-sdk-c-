@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SPANDAN-SDK-POC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d005029a3e47fc91494160fe55499307b9ce78a0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdcba93df16245aa816ce817af22b43aa7922f36")]
 [assembly: System.Reflection.AssemblyProductAttribute("SPANDAN-SDK-POC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SPANDAN-SDK-POC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

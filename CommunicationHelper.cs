@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Diagnostics;
 using System.Text;
 using WebSocketSharp;
 
@@ -7,6 +8,7 @@ namespace SPANDAN_SDK_POC
 {
     internal class CommunicationHelper
     {
+
         static WebSocket ws = new WebSocket("ws://localhost:8080");
         private static IOnDataReceiver onDataReceiver;
         private static  ArrayList leadPoints = new ArrayList();
@@ -23,9 +25,11 @@ namespace SPANDAN_SDK_POC
             ws.Send(command);
 
         }
-        public static async Task startClient(string maskterKey)
+        public static Task startClient(string maskterKey)
         {
-            
+            Task.Run(() => startServer());
+        
+
             bool messageSent = false;
             ws.OnMessage += (sender, e) =>
             {
@@ -58,8 +62,13 @@ namespace SPANDAN_SDK_POC
                 {
                     onDataReceiver.onReceiveError(e.Data.Split(":")[1]);
                 }
-
+                if (e.Data.Contains("Connected:Server"))
+                {
+                    onDataReceiver.onSDKConnectionStateChanged(e.Data);
+                }
             };
+
+            ws.OnOpen += (sender, e) => ws.Send("Hi, there!");
 
             // Continuously try to connect
             while (true)
@@ -67,6 +76,7 @@ namespace SPANDAN_SDK_POC
                 try
                 {
                     Console.WriteLine("Attempting to connect...");
+                    //ws.ConnectAsync();
                     ws.Connect();
                     
 
@@ -78,15 +88,17 @@ namespace SPANDAN_SDK_POC
                         {
                            // onDataReceiver.onDeviceConnectionStateChanged("CONNECTED");
                             ws.Send("connect-"+maskterKey);
-                           messageSent = true;
-                            Console.WriteLine("Connected!");
+                            messageSent = true;
                             
+                            Console.WriteLine("Connected!");
+                          
                         }
 
        
                     }
                     else
                     {
+                       
                         Console.WriteLine("Connection failed.");
                        
                         onDataReceiver.onSDKConnectionStateChanged("DISCONNECTED");
@@ -96,6 +108,7 @@ namespace SPANDAN_SDK_POC
                 }
                 catch (WebSocketSharp.WebSocketException)
                 {
+                 
                     Console.WriteLine("Connection failed. Retrying in 5 seconds...");
                   
                     onDataReceiver.onSDKConnectionStateChanged("DISCONNECTED");
@@ -104,7 +117,7 @@ namespace SPANDAN_SDK_POC
                 }
                 catch (ObjectDisposedException ex)
                 {
-                    // Handle the ObjectDisposedException
+                 
                     Console.WriteLine($"ObjectDisposedException: {ex.Message}");
        
                     onDataReceiver.onSDKConnectionStateChanged("DISCONNECTED");
@@ -112,14 +125,32 @@ namespace SPANDAN_SDK_POC
                 }
                 catch (Exception ex)
                 {
-                    // Handle other exceptions
+                  
                     Console.WriteLine($"An error occurred: {ex.Message}");
-                   
-                    onDataReceiver.onSDKConnectionStateChanged("DISCONNECTED");
+                    ws.Close();
+                  
+                    onDataReceiver.onSDKConnectionStateChanged(ex.Message);
                     messageSent = false;
                     
                 }
+              
             }
+        }
+
+        private static void startServer()
+        {
+            string strCmdText = "java -jar C:\\Users\\harsh\\IdeaProjects\\sericomm\\build\\libs\\sericomm-1.0-SNAPSHOT-all.jar";
+            Process process = new Process();
+            process.StartInfo.FileName = "cmd.exe";
+            process.StartInfo.Arguments = "/c " + strCmdText;
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.Start();
+
+            // Read the output (if needed)
+            string output = process.StandardOutput.ReadToEnd();
+            Console.WriteLine(output);
+
         }
     }
 
