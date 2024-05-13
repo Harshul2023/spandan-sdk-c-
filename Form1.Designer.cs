@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             button1 = new Button();
             button2 = new Button();
             label1 = new Label();
@@ -35,6 +36,11 @@
             label2 = new Label();
             checkBox1 = new CheckBox();
             label3 = new Label();
+            errorProvider1 = new ErrorProvider(components);
+            errorProvider2 = new ErrorProvider(components);
+            button3 = new Button();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider2).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -92,7 +98,6 @@
             checkBox1.TabIndex = 5;
             checkBox1.Text = "Authenticated";
             checkBox1.UseVisualStyleBackColor = true;
-  
             // 
             // label3
             // 
@@ -102,11 +107,30 @@
             label3.Size = new Size(0, 32);
             label3.TabIndex = 6;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            errorProvider2.ContainerControl = this;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(221, 839);
+            button3.Name = "button3";
+            button3.Size = new Size(215, 46);
+            button3.TabIndex = 7;
+            button3.Text = "Show Report";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1325, 939);
+            Controls.Add(button3);
             Controls.Add(label3);
             Controls.Add(checkBox1);
             Controls.Add(label2);
@@ -116,6 +140,8 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -129,5 +155,8 @@
         private Label label2;
         private CheckBox checkBox1;
         private Label label3;
+        private ErrorProvider errorProvider1;
+        private ErrorProvider errorProvider2;
+        private Button button3;
     }
 }

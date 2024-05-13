@@ -66,6 +66,10 @@ namespace SPANDAN_SDK_POC
                 {
                     onDataReceiver.onSDKConnectionStateChanged(e.Data);
                 }
+                if (e.Data.Contains("Report:"))
+                {
+                    onDataReceiver.onDeviceConnectionStateChanged(e.Data);
+                }
             };
 
             ws.OnOpen += (sender, e) => ws.Send("Hi, there!");
@@ -129,7 +133,7 @@ namespace SPANDAN_SDK_POC
                     Console.WriteLine($"An error occurred: {ex.Message}");
                     ws.Close();
                   
-                    onDataReceiver.onSDKConnectionStateChanged(ex.Message);
+                    onDataReceiver.onSDKConnectionStateChanged("Please Wait....");
                     messageSent = false;
                     
                 }
@@ -139,6 +143,7 @@ namespace SPANDAN_SDK_POC
 
         private static void startServer()
         {
+
             string strCmdText = "java -jar C:\\Users\\harsh\\IdeaProjects\\sericomm\\build\\libs\\sericomm-1.0-SNAPSHOT-all.jar";
             Process process = new Process();
             process.StartInfo.FileName = "cmd.exe";
@@ -150,6 +155,7 @@ namespace SPANDAN_SDK_POC
             // Read the output (if needed)
             string output = process.StandardOutput.ReadToEnd();
             Console.WriteLine(output);
+
 
         }
     }

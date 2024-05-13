@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\harsh\\source\\repos\\SPANDAN-SDK-POC\\SPANDAN-SDK-POC.csproj": {}
+    "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\SPANDAN-SDK-POC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\harsh\\source\\repos\\SPANDAN-SDK-POC\\SPANDAN-SDK-POC.csproj": {
+    "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\SPANDAN-SDK-POC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\harsh\\source\\repos\\SPANDAN-SDK-POC\\SPANDAN-SDK-POC.csproj",
+        "projectUniqueName": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\SPANDAN-SDK-POC.csproj",
         "projectName": "SPANDAN-SDK-POC",
-        "projectPath": "C:\\Users\\harsh\\source\\repos\\SPANDAN-SDK-POC\\SPANDAN-SDK-POC.csproj",
+        "projectPath": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\SPANDAN-SDK-POC.csproj",
         "packagesPath": "C:\\Users\\harsh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\harsh\\source\\repos\\SPANDAN-SDK-POC\\obj\\",
+        "outputPath": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

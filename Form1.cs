@@ -2,8 +2,8 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SPANDAN_SDK_POC
 {
-   
-    public partial class Form1 : Form,IOnDataReceiver
+
+    public partial class Form1 : Form, IOnDataReceiver
     {
 
         public Form1()
@@ -15,10 +15,10 @@ namespace SPANDAN_SDK_POC
 
         public void onDeviceConnectionStateChanged(string data)
         {
-            label3.Invoke((MethodInvoker)(() => label3.Text =data));
-            
-          
-           
+            label3.Invoke((MethodInvoker)(() => label3.Text = data));
+
+
+
         }
 
         public void onDeviceTypeChange(string data)
@@ -29,7 +29,7 @@ namespace SPANDAN_SDK_POC
         public void onDeviceVerified(string data)
         {
             label3.Invoke((MethodInvoker)(() => label3.Text = data));
-          
+
         }
 
         public void onElapsedTimeChanged(string data)
@@ -39,7 +39,7 @@ namespace SPANDAN_SDK_POC
 
         public void onPositionRecordingComplete(string points, System.Collections.ArrayList leadPoints)
         {
-            label3.Invoke((MethodInvoker)(() => label3.Text = points+" count ---->  "+leadPoints.Count));
+            label3.Invoke((MethodInvoker)(() => label3.Text = points + " count ---->  " + leadPoints.Count));
 
             progressBar1.Invoke((MethodInvoker)(() =>
             {
@@ -79,9 +79,9 @@ namespace SPANDAN_SDK_POC
 
         public void onTestStarted(string data)
         {
-            label3.Invoke((MethodInvoker)(() => label3.Text = data)); 
+            label3.Invoke((MethodInvoker)(() => label3.Text = data));
         }
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -90,12 +90,16 @@ namespace SPANDAN_SDK_POC
         }
 
         private void button2_Click(object sender, EventArgs e)
-            
+
         {
             progressBar1.Value = 0;
             CommunicationHelper.sendCommand("ecgPosition-" + EcgPosition.LEAD_2.ToString());
             // Handle button click event
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CommunicationHelper.sendCommand("generate report");
+        }
     }
 }

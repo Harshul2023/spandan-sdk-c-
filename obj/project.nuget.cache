@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vU4M/XplvqwWJHJ4sfh1VXldH5cNl3F3yJSs+ADWdM8joYOm7OygnSs0hD4njAEwVL3b+iQnnz9+3ijG2J+7uQ==",
+  "dgSpecHash": "J+6fzLI2CH67YPM+S9edbCtv+tJANeFkOI6PsM3uGa7jT4ca/Z6lQKH13fG9zZ6B7fUmjkfc2gHSIObptwuZRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\harsh\\source\\repos\\SPANDAN-SDK-POC\\SPANDAN-SDK-POC.csproj",
+  "projectFilePath": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\SPANDAN-SDK-POC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\harsh\\.nuget\\packages\\websocketsharp-netstandard\\1.0.1\\websocketsharp-netstandard.1.0.1.nupkg.sha512"
   ],
