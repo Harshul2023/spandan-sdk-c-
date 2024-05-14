@@ -68,8 +68,13 @@ namespace SPANDAN_SDK_POC
                 }
                 if (e.Data.Contains("Report:"))
                 {
-                    onDataReceiver.onDeviceConnectionStateChanged(e.Data);
+                    onDataReceiver.onReceivedData(e.Data);
                 }
+                if (e.Data.Contains("Report Error:"))
+                {
+                    onDataReceiver.onReportError(e.Data);
+                }
+                
             };
 
             ws.OnOpen += (sender, e) => ws.Send("Hi, there!");

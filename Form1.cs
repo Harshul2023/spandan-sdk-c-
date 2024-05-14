@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SPANDAN_SDK_POC
@@ -58,6 +59,16 @@ namespace SPANDAN_SDK_POC
             label3.Invoke((MethodInvoker)(() => label3.Text = points));
         }
 
+        public  void onReportError(string error)
+        {
+            label3.Invoke((MethodInvoker)(() => label3.Text = error));
+        }
+
+        public void onReportGeneration(string url)
+        {
+            label3.Invoke((MethodInvoker)(() => label3.Text = url));
+        }
+
         public void onSDKConnectionStateChanged(string points)
         {
             checkBox1.Invoke((MethodInvoker)(() =>
@@ -99,7 +110,23 @@ namespace SPANDAN_SDK_POC
 
         private void button3_Click(object sender, EventArgs e)
         {
-            CommunicationHelper.sendCommand("generate report");
+            JObject jsonObject = new JObject();
+            jsonObject.Add("age", "34");
+            jsonObject.Add("first_name", "Harshul");
+            jsonObject.Add("gender", "Male");
+            jsonObject.Add("generateReport", true);
+            jsonObject.Add("height", "147");
+            jsonObject.Add("last_name", "Mittal");
+            jsonObject.Add("report_type", EcgTestType.LEAD_TWO.ToString());
+            jsonObject.Add("weight", "70");
+
+            // Convert the JSON object to a string
+            string jsonString = jsonObject.ToString();
+
+
+            CommunicationHelper.sendCommand("generate report-"+jsonString);
         }
+
+        
     }
 }

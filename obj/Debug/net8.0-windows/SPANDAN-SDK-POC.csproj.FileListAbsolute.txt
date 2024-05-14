@@ -39,3 +39,4 @@ C:\Users\harsh\source\repos\spandan-sdk-c-\obj\Debug\net8.0-windows\SPANDAN-SDK-
 C:\Users\harsh\source\repos\spandan-sdk-c-\obj\Debug\net8.0-windows\SPANDAN-SDK-POC.genruntimeconfig.cache
 C:\Users\harsh\source\repos\spandan-sdk-c-\obj\Debug\net8.0-windows\ref\SPANDAN-SDK-POC.dll
 C:\Users\harsh\source\repos\spandan-sdk-c-\bin\Debug\net8.0-windows\Spandan_SDK_dll.dll
+C:\Users\harsh\source\repos\spandan-sdk-c-\bin\Debug\net8.0-windows\Newtonsoft.Json.dll

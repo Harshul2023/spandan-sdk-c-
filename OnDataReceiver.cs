@@ -13,6 +13,8 @@ public interface IOnDataReceiver
     void onReceivedData(string data);
     void onPositionRecordingComplete(string points, System.Collections.ArrayList leadPoints);
     void onReceiveError(string error);
+    void onReportGeneration(string url);
+    void onReportError(string error);
 }
 enum EcgTestType
 {
