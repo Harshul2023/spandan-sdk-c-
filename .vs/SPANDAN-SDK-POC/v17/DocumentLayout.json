@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\communicationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|solutionrelative:communicationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|c:\\users\\harsh\\source\\repos\\spandan-sdk-c-\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|c:\\users\\harsh\\source\\repos\\spandan-sdk-c-\\spandansdk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|solutionrelative:spandansdk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\ondatareceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|solutionrelative:ondatareceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6675DA59-5AAB-4271-9E40-F1497C7E9E4A}|SPANDAN-SDK-POC.csproj|C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -38,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "OnDataReceiver.cs",
               "DocumentMoniker": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\OnDataReceiver.cs",
               "RelativeDocumentMoniker": "OnDataReceiver.cs",
               "ToolTip": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\OnDataReceiver.cs",
               "RelativeToolTip": "OnDataReceiver.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAqwBAAAAAlAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAA8wA8AAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-13T11:40:00.832Z",
               "EditorCaption": ""
@@ -62,11 +62,12 @@
               "ToolTip": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\Form1.resx",
               "RelativeToolTip": "Form1.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-05-13T10:58:52.282Z"
+              "WhenOpened": "2024-05-13T10:58:52.282Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
@@ -79,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -99,17 +100,18 @@
               "ToolTip": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T10:56:20.006Z"
+              "WhenOpened": "2024-05-13T10:56:20.006Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CommunicationHelper.cs",
-              "DocumentMoniker": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\CommunicationHelper.cs",
-              "RelativeDocumentMoniker": "CommunicationHelper.cs",
-              "ToolTip": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\CommunicationHelper.cs",
-              "RelativeToolTip": "CommunicationHelper.cs",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAgwJEAAAANAAAA",
+              "DocumentIndex": 1,
+              "Title": "SpandanSdk.cs",
+              "DocumentMoniker": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\SpandanSdk.cs",
+              "RelativeDocumentMoniker": "SpandanSdk.cs",
+              "ToolTip": "C:\\Users\\harsh\\source\\repos\\spandan-sdk-c-\\SpandanSdk.cs",
+              "RelativeToolTip": "SpandanSdk.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-16T10:47:34.025Z",
               "EditorCaption": ""

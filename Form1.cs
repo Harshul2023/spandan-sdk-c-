@@ -10,8 +10,8 @@ namespace SPANDAN_SDK_POC
         public Form1()
         {
             InitializeComponent();
-            CommunicationHelper.RegisterOnDataReceiver(this);
-            Task.Run(() => CommunicationHelper.startClient("4u838u43u439u3")); // Run startClient asynchronously
+            SpandanSdk.RegisterOnDataReceiver(this);
+            Task.Run(() => SpandanSdk.startClient("4u838u43u439u3")); // Run startClient asynchronously
         }
 
         public void onDeviceConnectionStateChanged(string data)
@@ -96,7 +96,7 @@ namespace SPANDAN_SDK_POC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CommunicationHelper.sendCommand("createTest-" + EcgTestType.LEAD_TWO.ToString());
+            SpandanSdk.sendCommand("createTest-" + EcgTestType.LEAD_TWO.ToString());
             // Handle button click event
         }
 
@@ -104,7 +104,7 @@ namespace SPANDAN_SDK_POC
 
         {
             progressBar1.Value = 0;
-            CommunicationHelper.sendCommand("ecgPosition-" + EcgPosition.LEAD_2.ToString());
+            SpandanSdk.sendCommand("ecgPosition-" + EcgPosition.LEAD_2.ToString());
             // Handle button click event
         }
 
@@ -124,7 +124,7 @@ namespace SPANDAN_SDK_POC
             string jsonString = jsonObject.ToString();
 
 
-            CommunicationHelper.sendCommand("generate report-"+jsonString);
+            SpandanSdk.sendCommand("generate report-"+jsonString);
         }
 
         

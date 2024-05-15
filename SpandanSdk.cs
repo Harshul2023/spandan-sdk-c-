@@ -6,7 +6,7 @@ using WebSocketSharp;
 
 namespace SPANDAN_SDK_POC
 {
-    internal class CommunicationHelper
+    internal class SpandanSdk
     {
 
         static WebSocket ws = new WebSocket("ws://localhost:8080");
